@@ -82,22 +82,6 @@ async def main():
     print("The member methods of the value returned by the collect_metrics functdion are", dir(results))
     
 
-    # new and improved:
-#    print("new/hotness:")
-#    for hostname, ip_results in results.items():
-#        print(f"\nResults for {hostname}:")
-#        for ip, ping_result in ip_results.items():
-#            print(f"  IP: {ip}")
-#            print(f"    Min RTT: {ping_result.min_rtt:.2f}ms")
-#            print(f"    Avg RTT: {ping_result.avg_rtt:.2f}ms")
-#            print(f"    Max RTT: {ping_result.max_rtt:.2f}ms")
-#            print(f"    Packets sent: {ping_result.packets_sent}")
-#            print(f"    Packets received: {ping_result.packets_received}")
-#            print(f"    Packet loss: {ping_result.packet_loss}%")
-#            print("The attributes returned by the ping function are", dir(ping_result))
-#            print("The type of ping_result.rtts is ", type(ping_result.rtts))
-#            print("The value of ping_result.rtts is ", ping_result.rtts)
-#            print("What happens if I just print the return directly? Let's see:", ping_result)
 
 if __name__ == "__main__":
     asyncio.run(main())

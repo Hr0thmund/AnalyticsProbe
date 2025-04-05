@@ -1,0 +1,9 @@
+OS modification needed to allow icmplib to function without root privileges:
+
+Find group ID - look in /etc/group
+
+echo 'net.ipv4.ping_group_range = 1000 1000' | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+
+echo 'net.ipv4.ping_group_range = 1000 1000' | tee -a /etc/sysctl.conf
+sysctl -p
